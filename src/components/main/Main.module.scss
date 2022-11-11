@@ -1,0 +1,10 @@
+.registerTitle{
+    margin-top:1.5rem;
+    font-size: 1.8rem;
+}
+
+:global(.mainContain){
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:2rem;
+}

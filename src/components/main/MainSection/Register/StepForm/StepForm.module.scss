@@ -1,0 +1,33 @@
+form{
+    margin-top:1rem;
+  }
+  
+  :global(.col){
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    align-items: center;
+    margin-top:1.5rem;
+  }
+  
+  :global(.formTitle){
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 2rem;
+  }
+  
+  :global(.formBody){
+    margin:1rem;
+  }
+  .inputGroup{
+    margin-top: 24px;
+  }
+  
+  :global(.inputLabel){
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--input-label);
+    margin-bottom: 8px;
+  }

@@ -1,0 +1,58 @@
+
+//step2 shipping 樣式
+.radioGroup{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px; 
+    border: 2px solid #9d9d9d ;
+    height:100px;
+    &:hover{
+      border-color: #4a4a4a;
+    }
+
+}
+  // step2 shipping按鈕樣式
+  input[type='radio'] {
+    position:relative;
+    appearance: none;
+    width:20px;
+    height: 20px;
+    border-color:transparent;
+    border-radius: 50%;
+    margin-right:2rem;
+  }
+  input[type='radio']::before {
+    position:relative;
+    content: '';
+    left:0;
+    top:0;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #222222;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+input[type='radio']:checked::before {
+    border: 6px solid #2A2A2A;
+    background-color: #FFFFFF;
+}
+
+.shippingStandard{
+  flex-grow: 0.7;
+}
+.radioInfo{
+    flex-grow: 3;
+    font-weight: 500;
+    .shippingItem{
+      display:flex;
+      justify-content: space-between;
+    }
+}  
+
+
+  
