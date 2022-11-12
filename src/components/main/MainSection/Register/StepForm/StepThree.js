@@ -1,5 +1,5 @@
 
-import styles from "./StepThree.module.scss"
+import styles from "./StepStyle/StepThree.module.scss"
 
 
 export default function StepThree(){

@@ -1,4 +1,4 @@
-import styles from './StepTwo.module.scss'
+import styles from './StepStyle/StepTwo.module.scss'
 export function ShippingContain ({shippingMethod, price, period}) {
     return(
         <label className={styles.radioGroup} data-price="0">
