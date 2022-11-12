@@ -1,6 +1,7 @@
 
 # alpha-shop-project
-
+## 網頁畫面
+![alpha shop](https://github.com/Ai-Chen-Hsieh/alpha-shop-project/blob/main/public/alpha%20shop%20img.png)
 
 ## 專案執行步驟
 
