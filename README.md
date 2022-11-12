@@ -25,8 +25,13 @@ nvm use 14.16.0
 ```
 npx create-react-app my-app
 ```
+4. 安裝Sass
 
-4.啟動伺服器
+```
+npm install sass
+```
+
+5.啟動伺服器
 ```
 npm start
 ```
@@ -40,4 +45,5 @@ npm start
 
 - [Visual Studio Code](https://visualstudio.microsoft.com/zh-hant/) - 開發環境
 - [Node](https://github.com/nvm-sh/nvm) - Node (本專案使用版本v16.18.0)
+- [Sass](https://create-react-app.dev/docs/adding-a-sass-stylesheet/) Adding a Sass Stylesheet
 - [React](https://create-react-app.dev/) - Create React App
