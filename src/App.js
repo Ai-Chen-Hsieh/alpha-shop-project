@@ -5,7 +5,6 @@ function App() {
     <div className="App">
         <h1>Alpha shop</h1>
         <Main />
-        <></>
     </div>  
   );
 }
