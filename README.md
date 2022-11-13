@@ -29,7 +29,7 @@ npx create-react-app my-app
 4. 安裝Sass
 
 ```
-npm install sass
+npm i sass --save-dev
 ```
 
 5.啟動伺服器
@@ -46,5 +46,5 @@ npm start
 
 - [Visual Studio Code](https://visualstudio.microsoft.com/zh-hant/) - 開發環境
 - [Node](https://github.com/nvm-sh/nvm) - Node (本專案使用版本v16.18.0)
-- [Sass](https://create-react-app.dev/docs/adding-a-sass-stylesheet/) Adding a Sass Stylesheet
+- [Sass](https://sass-lang.com/dart-sass) Dart Sass
 - [React](https://create-react-app.dev/) - Create React App
