@@ -22,7 +22,7 @@ function Products({data}){
     const products = data.map( product => 
             <section className='product' key={product.id}>
             <img className='productImg' src={product.img} alt=''></img>
-            <div class='productInfo'>
+            <div className='productInfo'>
                 <div className='productName'>{product.name}</div>
                 <div className='productControlContainer'>
                     <div className='productControl'>
@@ -34,7 +34,7 @@ function Products({data}){
                 <div className='price'>$ {product.price}</div>
             </div>
         </section>
-        );
+    );
     return(
         <>{products}</>
     )
@@ -42,11 +42,12 @@ function Products({data}){
 
 //cart
 export default function Cart(){
+
     return(
         <section className='CartSection'>
             <h3 className='cartTitle'>購物籃</h3>
             <section className='productList'>
-                <Products data={CartList}/>
+                <Products data = {CartList}/>
             </section>
             <section className='cartInfoShipping'>
                     <div className="text">運費</div>
@@ -54,7 +55,7 @@ export default function Cart(){
                 </section>
             <section className='cartInfoTotal'>
                     <div className="text">小計</div>
-                    <div className="price">200</div>
+                    <div className="price totalPrice">$ 300</div>
                 </section>
         </section>
     )

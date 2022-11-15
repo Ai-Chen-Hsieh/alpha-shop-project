@@ -47,12 +47,6 @@ const County = [
   },
 ]
 
-function CountyOption ({data}){
-  return(
-    data.map(item => 
-      <option key={item.id} value={item.id}>{item.name}</option>
-    )
-)}
 
 
  function InputGroup ({labelName, inputInfo, children}) {
@@ -99,7 +93,9 @@ export default function StepOne () {
             <div className={styles.selectContainer}>
                 <select required>
                   <option value="">請選擇縣市</option>
-                  <CountyOption data={County}/>
+                    {County.map(item => 
+                      <option key={item.id} value={item.id}>{item.name}</option>
+                    )}
                 </select>
               </div>
             </InputGroup>
