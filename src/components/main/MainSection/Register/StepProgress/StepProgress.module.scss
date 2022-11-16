@@ -37,7 +37,7 @@ section.progressContainer {
 
 
 //step style
-.primaryText{
+.text{
     //顏色樣式
     color:var(--grey-300);
     background-color:var(--white);
@@ -55,6 +55,7 @@ section.progressContainer {
 }
 
 
+
 //completed style
 .progressBarCompleted {
     composes:progressBar;
@@ -65,11 +66,13 @@ section.progressContainer {
     composes:progressLabel;
     color:var(--grey-800);
 }
-
-.primaryTextCompleted{
-    composes: primaryText;
+.textDoing{
+    composes: text;
     background-color: var(--grey-800);
     color: var(--white);
     border:1px solid var(--grey-800);
 }
 
+.dNone{
+    display:none;
+}

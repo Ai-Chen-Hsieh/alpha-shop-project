@@ -1,21 +1,22 @@
 // progressControl
-  .progressControlContainer{
+  :global(.progressControlContainer){
     margin: 1rem;
-    margin-top:2rem;
-    height:2.5em;
+    margin-top:3rem;
+    height:2.5rem;
     display: flex;
   }
 
-  .buttonGroup{
+  :global(.buttonGroup){
     width:100%;
-    display:flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
     padding: 0px;
   }
 
 .btnPrimary, .btnOutline {
-  font-size:1.2rem;
-  padding:0 1.5rem;
+  font-size: 1.2rem;
+  padding:0.5rem 1.5rem;
   border-radius: 8px;
   border-width: 0px;
   background-color: var(--pink);
@@ -23,9 +24,11 @@
   cursor: pointer;
 }
 
+
 .btnPrimary{
   background-color: var(--background-color);
   color:var(--grey-800);
+  grid-column: 1/2;
   &:hover{
     border-width: 1px;
     border-color:var(--grey-300)
@@ -33,7 +36,12 @@
 }
 
 .btnOutline{
+  grid-column: 2/3;
   &:hover{
     opacity: 0.7;
   }
+}
+
+.invisible{
+  visibility:hidden;
 }

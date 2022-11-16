@@ -1,18 +1,22 @@
 import styles from './ProgressControl.module.scss'
 
-export default function ProgressControl() {
-    return(
-        <section className={styles.progressControlContainer}>
-          <section className={styles.buttonGroup} data-phase="address">
-          <button className={`${styles.btnPrimary}`}>
-              <span className={styles.preIcon}>&#8592;  </span>上一步
-            </button>
-            <button className={`${styles.btnOutline}`}>
-              下一步  <span className={styles.nextIcon}>&#8594;</span> 
-            </button>
-          </section>
-        </section>
-    )
 
-    
+export default function ProgressControl({currentState, handlePrevClick, handleNextClick}) {
+ 
+    return(
+      <section className='progressControlContainer'>
+        <section className='buttonGroup' data-phase='address' currentState={currentState}>
+            <button 
+              className={currentState === 1 ? styles.invisible : styles.btnPrimary}
+              onClick={handlePrevClick}
+            >
+              <span >&#8592; </span>上一步
+            </button>
+            <button className={styles.btnOutline} onClick={handleNextClick}>
+              {currentState === 3 ? '確定下單' : '下一步'}
+              {currentState !== 3 && <span>&#8594;</span> }
+            </button>
+        </section>
+      </section>
+    )    
 }

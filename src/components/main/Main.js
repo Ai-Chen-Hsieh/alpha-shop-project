@@ -1,5 +1,4 @@
 import styles from './Main.module.scss'
-
 import Register from './MainSection/Register/Register.js'
 import Cart from './MainSection/Cart/Cart.js'
 
