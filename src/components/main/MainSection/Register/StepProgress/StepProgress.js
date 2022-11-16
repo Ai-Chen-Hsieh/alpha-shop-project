@@ -7,7 +7,7 @@ function Step ({ currentState, step, label} ) {
        <span className={styles.progressGroup}>
         <span className={styles.progressIcon}>
           <span className={
-              (currentState >= step ? styles.dNone : styles.text)
+              (currentState >= step ? styles.dNone : styles.textUndone)
             }>{step}</span>
             <svg className='iconStyle' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="12" cy="12" r="12" fill="#333333"/>
