@@ -1,14 +1,26 @@
 import styles from './StepProgress.module.scss'
 
+function StepControl({currentState, step}){
+  if(currentState < step) {
+    return <span className={styles.textUndone}>{step}</span>
+  } if(currentState === step) {
+    return <span className = {styles.textActive}>{step}</span>
+  } else {
+    return null
+  }
+}
 
 function Step ({ currentState, step, label} ) {
+  
+
   return (
     <>
        <span className={styles.progressGroup}>
         <span className={styles.progressIcon}>
-          <span className={
-              (currentState >= step ? styles.dNone : styles.textUndone)
-            }>{step}</span>
+          <StepControl 
+            currentState={currentState}
+            step={step}
+          />
             <svg className='iconStyle' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="12" cy="12" r="12" fill="#333333"/>
               <path d="M9.99997 16.1699L5.82997 11.9999L4.40997 13.4099L9.99997 18.9999L20.5 8.49994L19.09 7.08994L9.99997 16.1699Z" fill="white"/>
