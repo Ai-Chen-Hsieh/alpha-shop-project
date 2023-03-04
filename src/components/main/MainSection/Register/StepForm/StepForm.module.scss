@@ -1,6 +1,43 @@
 form{
     margin-top:1rem;
   }
+
+input, select {
+  width: 100%;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 16px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background-color: transparent;
+  &:focus{
+      outline: none;
+      border-color:var(--grey-300);
+  }
+  &:hover{
+    cursor:pointer;
+    border-color:var(--grey-300);
+  }
+}
+select {
+  color: var(--select-true);
+  background-color: transparent;
+
+  &:required:invalid {
+      color: var(--select-false);
+  }
+  cursor: pointer;
+  appearance: none;
+
+  option {
+      &[value=""][disabled] {
+          display: none;
+      }
+      color: var(--select-true);
+  }
+}
   
   :global(.col){
     display:flex;
@@ -21,6 +58,7 @@ form{
   :global(.formBody){
     margin:1rem;
   }
+  
   .inputGroup{
     margin-top: 24px;
   }
@@ -31,3 +69,5 @@ form{
     color: var(--input-label);
     margin-bottom: 8px;
   }
+
+

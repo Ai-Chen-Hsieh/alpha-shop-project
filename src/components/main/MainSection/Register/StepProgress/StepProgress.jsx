@@ -1,3 +1,4 @@
+
 import styles from './StepProgress.module.scss'
 
 function StepControl({currentState, step}){
@@ -12,7 +13,6 @@ function StepControl({currentState, step}){
 
 function Step ({ currentState, step, label} ) {
   
-
   return (
     <>
        <span className={styles.progressGroup}>

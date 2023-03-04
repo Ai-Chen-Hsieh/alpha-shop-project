@@ -1,4 +1,5 @@
 import styles from './StepStyle/StepOne.module.scss'
+import { InputGroup } from '../StepForm/StepForm'
 
 const County = [
   {
@@ -49,15 +50,6 @@ const County = [
 
 
 
- function InputGroup ({labelName, inputInfo, children}) {
-  return(
-    <div className={`${styles.inputGroup} ${inputInfo}`}>
-      <div className='inputLabel'>{labelName}</div>
-        {children}
-    </div>
-  )
-}
-
 
 export default function StepOne () {
   return (
@@ -66,7 +58,8 @@ export default function StepOne () {
        <h3 className='formTitle'>寄送地址</h3>
        <section className='formBody'>
           <div className='col'>
-            <InputGroup labelName='稱謂' inputInfo={styles.genderInfo}>
+            <div className={`${styles.inputGroup} ${styles.genderInfo}`}>
+              <div className='inputLabel'>稱謂</div>
               <div className={styles.selectContainer}>
                 <select name="gender" id="gender">
                   <option value="DEFAULT">稱謂</option>
@@ -75,22 +68,31 @@ export default function StepOne () {
                   <option value="mx">不明</option>
                 </select>
               </div>
-            </InputGroup>
-            <InputGroup labelName='姓名' inputInfo={styles.nameInfo}>
-            <input type="text" placeholder="請輸入姓名" />
-            </InputGroup>
-          </div>
-          <div className='col'>
-            <InputGroup labelName='電話' inputInfo={styles.phoneInfo}>
-              <input type="tel" placeholder="請輸入行動電話" />
-            </InputGroup>
-            <InputGroup labelName='email' inputInfo={styles.emailInfo}>
-              <input type="email" placeholder="請輸入電子郵件" />
+            </div>
+            <InputGroup 
+              labelName='姓名' 
+              inputInfo={styles.nameInfo} 
+              placeholder="請輸入姓名">
             </InputGroup>
           </div>
           <div className='col'>
-            <InputGroup labelName='縣市' inputInfo={styles.countryInfo}>
-            <div className={styles.selectContainer}>
+            <InputGroup 
+              labelName='電話' 
+              inputInfo={styles.phoneInfo}
+              type="tel" 
+              placeholder="請輸入行動電話">
+            </InputGroup>
+            <InputGroup 
+              labelName='email' 
+              inputInfo={styles.emailInfo}
+              type="email" 
+              placeholder="請輸入電子郵件">
+            </InputGroup>
+          </div>
+          <div className='col'>
+          <div className={`${styles.inputGroup} ${styles.countryInfo}`}>
+            <div className='inputLabel'>縣市</div>
+              <div className={styles.selectContainer}>
                 <select required>
                   <option value="">請選擇縣市</option>
                     {County.map(item => 
@@ -98,9 +100,11 @@ export default function StepOne () {
                     )}
                 </select>
               </div>
-            </InputGroup>
-            <InputGroup labelName='地址' inputInfo={styles.addressInfo}>
-              <input type="text" placeholder="請輸入地址" />
+          </div>
+            <InputGroup 
+              labelName='地址' 
+              inputInfo={styles.addressInfo}
+              placeholder="請輸入地址">
             </InputGroup>
           </div>
         </section>
