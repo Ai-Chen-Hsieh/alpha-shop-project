@@ -2,7 +2,7 @@ import { createContext } from "react"
 import { productsList } from './CartContext'
 
 const totalPrice = productsList.reduce((acc, cur) => cur.price * cur.quantity + acc, 0)        
-        
+
 
 export const customerInfo = {
     name: 'John Doe',

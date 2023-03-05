@@ -2,7 +2,7 @@ import StepForm from './StepForm/StepForm'
 import StepProgress from './StepProgress/StepProgress'
 import ProgressControl from './ProgressControl/progressControl'
 import { useState, useContext} from 'react';
-import { CustomerInfoContext } from '../../../Context/CustomerContext'
+import { CustomerInfoContext } from '../../../../Context/CustomerContext'
 
 
 export default function Register() {

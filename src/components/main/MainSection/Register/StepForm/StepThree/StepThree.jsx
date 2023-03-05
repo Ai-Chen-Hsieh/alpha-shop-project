@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { CustomerInfoContext } from '../../../../Context/CustomerContext'
-import styles from "./StepStyle/StepThree.module.scss"
+import { CustomerInfoContext } from 'Context/CustomerContext'
+import styles from "./StepThree.module.scss"
 
 export default function StepThree(){
     const {info, setInfo}  = useContext(CustomerInfoContext)

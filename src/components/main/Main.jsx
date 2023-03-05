@@ -2,8 +2,8 @@ import styles from './Main.module.scss'
 import Register from './MainSection/Register/Register'
 import Cart from './MainSection/Cart/Cart'
 import { useState } from 'react'
-import { CartListContext, productsList } from '../Context/CartContext'
-import { CustomerInfoContext, customerInfo } from '../Context/CustomerContext'
+import { CartListContext, productsList } from 'Context/CartContext'
+import { CustomerInfoContext, customerInfo } from 'Context/CustomerContext'
 
 
 export default function MainSection(){
@@ -23,12 +23,11 @@ export default function MainSection(){
             }
         })
         setCartProducts(() => newProducts)
-        const calculateTalPrice = newProducts.reduce((acc, cur) => cur.price * cur.quantity + acc, 0)        
-        setInfo(()=>{
-            return {
-                ...info,
-                totalPrice: calculateTalPrice
-            }
+        const calculateTalPrice = newProducts.reduce((acc, cur) => cur.price * cur.quantity + acc, 0) 
+        const calculateTalPriceFormat = new Intl.NumberFormat().format(calculateTalPrice);  
+        setInfo({
+            ...info,
+            totalPrice: calculateTalPriceFormat
         })
       }
 
@@ -48,12 +47,12 @@ export default function MainSection(){
         //數量為0則移除購物車
         newProducts = newProducts.filter(p => p.quantity > 0)
         setCartProducts(() =>newProducts)
-        const calculateTalPrice = newProducts.reduce((acc, cur) => cur.price * cur.quantity + acc, 0)        
-        setInfo(()=>{
-            return {
-                ...info,
-                totalPrice: calculateTalPrice
-            }
+        const calculateTalPrice = newProducts.reduce((acc, cur) => cur.price * cur.quantity + acc, 0) 
+        const calculateTalPriceFormat = new Intl.NumberFormat().format(calculateTalPrice);
+
+        setInfo({
+            ...info,
+            totalPrice: calculateTalPriceFormat
         })
     }
     return (

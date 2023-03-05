@@ -2,7 +2,7 @@
 import styles from './StepForm.module.scss'
 // import StepOne from './StepOne'
 // import StepTwo from './StepTwo'
-import StepThree from './StepThree'
+import StepThree from '../StepForm/StepThree/StepThree'
 
 export function InputGroup ({labelName, inputInfo, type = "text", placeholder}) {
   return(

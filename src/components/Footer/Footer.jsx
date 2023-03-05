@@ -1,8 +1,8 @@
 import styles from "./Footer.module.scss"
 
-import { ReactComponent as Logo } from '../../icons/logo.svg'
-import { ReactComponent as Fb } from '../../icons/facebook.svg'
-import { ReactComponent as Ig } from '../../icons/instagram.svg'
+import { ReactComponent as Logo } from 'icons/logo.svg'
+import { ReactComponent as Fb } from 'icons/facebook.svg'
+import { ReactComponent as Ig } from 'icons/instagram.svg'
 
 function FooterSection({title, children}){
     return(
