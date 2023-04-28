@@ -27,7 +27,7 @@
 
 .btnPrimary{
   background-color: var(--background-color);
-  color:var(--grey-800);
+  color:var(--btn-primary-color);
   grid-column: 1/2;
   &:hover{
     border-width: 1px;

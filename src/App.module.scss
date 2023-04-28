@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   font-family: 'Noto Sans TC', sans-serif;
-
 }
 
 ul, li{
@@ -25,31 +24,21 @@ a{
     --grey-700: #333333;
     --grey-400: #808080;
     --grey-300: #999999;
-
     --site-edge-margin: 15px;
-
     --main-font-family: 'Noto Sans TC', sans-serif;
 }
 
 body {
-    --background-color: #FFFFFF;
-    --footer-background-color: #F6F7F8;
-    --nav-icon: #2A2A2A;
     --social-icon: #808080;
-    --main-text: #2A2A2A;
-    --secondary-text: #808080;
     --active-color: lightblue;
+    --step-undone-border: (--grey-300);
+    --step-done-background: var(--grey-800);
+    --step-done-border: var(--grey-800);
 
-    --undone-progress-border: #F0F0F5;
-    --done-progress-border: #000000;
-    --progress-current-color: #2A2A2A;
-    --progress-done-color: #FFFFFF;
-    --progress-undone-color: #AFB1BD;
     --pg-addr-color: #FFFFFF;
     --pg-addr-bg-color: #2A2A2A;
     --input-label: #808080;
     --input-border: #4A4A4A;
-    --input-text: #999999;
     --select-arrow: #2A2A2A;
     --select-true: #2A2A2A;
     --select-false: #999999;
@@ -57,8 +46,6 @@ body {
     --product-action-bg: #F0F0F5;
     --left-arrow: #000000;
 
-    background-color: var(--background-color);
-    color: var(--main-text);
     font-family: var(--main-font-family);
     font-size: 16px;
     user-select: none;
@@ -69,6 +56,46 @@ body {
     margin: 0 auto;
     display:flex;
     flex-direction:column;
+}
+
+:global(.light) {
+    --background-color: #FFFFFF;
+    --main-text: #2A2A2A;
+    --secondary-text: #808080;
+    --nav-icon: var(--main-text);
+    --nav-background: var(--white);
+    --input-text: var(--main-text);
+    --progress-undone-color: #bdbdbd;
+    --progress-done-color: var(--main-text);
+    --undone-progress-border: #a7a7a7;
+    --done-progress-border: #000000;
+    --step-undone-background: var(--background-color);
+    --btn-primary-color: var(--grey-800);
+    --cart-background: var(--background-color);
+    --footer-background-color: #F6F7F8;
+
+    background-color: var(--background-color);
+    color: var(--main-text);
+}
+
+:global(.dark) {
+    --background-color:#121212;
+    --main-text: #fff;
+    --secondary-text: #c2c2c2;
+    --nav-icon: var(--main-text);
+    --nav-background: var(--grey-800);
+    --input-text: var(--main-text);
+    --progress-undone-color: #646464;
+    --progress-done-color: var(--main-text);
+    --undone-progress-border: #F0F0F5;
+    --done-progress-border: #000000;
+    --step-undone-background: var(--background-color);
+    --btn-primary-color: var(--white);
+    --cart-background:#383838;
+    --footer-background-color: #383838;
+
+    background-color: var(--background-color);
+    color: var(--main-text);
 }
 
 :global(.container){
@@ -116,3 +143,5 @@ form{
     color: var(--input-label);
     margin-bottom: 8px;
 }
+
+

@@ -26,22 +26,22 @@ section.progressContainer {
     margin: 0px 8px;
     border-width: 2px;
     border-style: solid;
-    border-color:var(--grey-300);
+    border-color:var(--progress-undone-color);
 }
 
 .progressLabel {
     font-weight: 400;
     line-height: 24px;
-    color:var(--grey-300);
+    color:var(--main-text);
 }
 
 
 //step style
 .textUndone{
     //顏色樣式
-    color:var(--grey-300);
-    background-color:var(--white);
-    border:1px solid var(--grey-300);
+    color:var(--progress-undone-color);
+    background-color:var(--step-undone-background);
+    border:1px solid var(--step-undone-border);
     //外觀
     width: inherit;
     height: inherit;
@@ -59,17 +59,17 @@ section.progressContainer {
 //completed style
 .progressBarCompleted {
     composes:progressBar;
-    border-color:var(--grey-800);
+    border-color:var(--progress-done-color);
 }
 
 .progressLabelCompleted{
     composes:progressLabel;
-    color:var(--grey-800);
+    color:var(--progress-done-color);
 }
 .textActive{
     composes: textUndone;
-    background-color: var(--grey-800);
+    background-color: var(--step-done-background);
     color: var(--white);
-    border:1px solid var(--grey-800);
+    border:1px solid var(--step-done-border);
 }
 

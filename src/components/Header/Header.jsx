@@ -7,7 +7,7 @@ import { ReactComponent as ToggleIcon } from 'icons/toggle.svg'
 
 
 
-export default function Header(){
+export default function Header({onToggleTheme}){
     return(
     <header className="site-header">
       <div className="header-container">
@@ -35,15 +35,14 @@ export default function Header(){
             </li>
           </ul>
           <ul className="nav-list site-action-list">
-
             <li className="nav-item">
-                <Search />
+              <Search />
             </li>
             <li className="nav-item">
-                <Cart />
+              <Cart />
             </li>
             <li id="theme-toggle" className="nav-item">
-                <Moon />
+              <Moon onClick={onToggleTheme}/>
             </li>
           </ul>
         </nav> 
