@@ -1,7 +1,9 @@
 
 # alpha-shop-project
 ## 網頁畫面
-![alpha shop](https://github.com/Ai-Chen-Hsieh/alpha-shop-project/blob/main/public/alpha%20shop%20img.png)
+![alpha shop](https://github.com/Ai-Chen-Hsieh/alpha-shop-project/blob/main/public/img/alpha_shop_light.png)
+![alpha shop dark](https://github.com/Ai-Chen-Hsieh/alpha-shop-project/blob/main/public/img/alpha_shop_dark.png)
+![alpha shop RWD](https://github.com/Ai-Chen-Hsieh/alpha-shop-project/blob/main/public/img/alpha_shop_rwd.png)
 
 ## 專案執行步驟
 
@@ -48,3 +50,4 @@ npm start
 - [Node](https://github.com/nvm-sh/nvm) - Node (本專案使用版本v16.18.0)
 - [Sass](https://sass-lang.com/dart-sass) Dart Sass
 - [React](https://create-react-app.dev/) - Create React App
+- [SweetAlert](https://sweetalert2.github.io/#declarative-templates) - sweetAlert2
