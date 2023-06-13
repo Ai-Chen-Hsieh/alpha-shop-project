@@ -14,7 +14,6 @@ export const productsList = [
       img: 'https://picsum.photos/300/300?text=2',
       price: 200,
       quantity: 1,
-
     },
   ]
 

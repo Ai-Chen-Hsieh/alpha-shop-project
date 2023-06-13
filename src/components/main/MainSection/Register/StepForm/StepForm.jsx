@@ -1,22 +1,25 @@
-//保留StepTwo & StepThree import。未來開發功能: 依照當前結帳步驟渲染 StepTwo & StepThree
 import styles from './StepForm.module.scss'
-// import StepOne from './StepOne'
-// import StepTwo from './StepTwo'
-import StepThree from '../StepForm/StepThree/StepThree'
+import StepOne from './StepOne/StepOne'
+import StepTwo from './StepTwo/StepTwo'
+import StepThree from './StepThree/StepThree'
 
-export function InputGroup ({labelName, inputInfo, type = "text", placeholder}) {
+export function InputGroup ({labelName, inputInfo, type = "text", placeholder, value, name, onHandleChange}) {
   return(
     <div className={`${styles.inputGroup} ${inputInfo}`}>
       <div className='inputLabel'>{labelName}</div>
-      <input type={type} placeholder={placeholder} />
+      <input type={type} placeholder={placeholder} value={value}  name={name} onChange={(e) => {
+        onHandleChange?.(e, 'address')
+      }}/>
     </div>
   )
 }
 
-export default function StepForm(){
+export default function StepForm({currentState}){
     return(
         <>
-          <StepThree/>
+          <StepOne currentState={currentState} />
+          <StepTwo currentState={currentState} />
+          <StepThree currentState={currentState} />
         </>
     )
 }

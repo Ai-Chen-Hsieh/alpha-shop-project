@@ -14,7 +14,6 @@ function App() {
       setTheme('light')
     }
   }
-  console.log(theme)
 
   return (
     <div className={`App ${theme}`}>

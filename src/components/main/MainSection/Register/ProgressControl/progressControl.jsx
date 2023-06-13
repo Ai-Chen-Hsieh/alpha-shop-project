@@ -1,7 +1,7 @@
 import styles from './ProgressControl.module.scss'
 
 export default function ProgressControl({currentState, handlePrevClick, handleNextClick}) {
- 
+
     return(
       <section className='progressControlContainer'>
         <section className='buttonGroup' data-phase='address'>

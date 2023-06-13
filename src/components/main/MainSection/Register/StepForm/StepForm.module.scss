@@ -45,7 +45,7 @@ select {
     justify-content: space-between;
     width:100%;
     align-items: center;
-    margin-top:1.5rem;
+    margin-top:1.2em;
   }
   
   :global(.formTitle){
@@ -58,6 +58,7 @@ select {
   
   :global(.formBody){
     margin:1rem;
+    height: 350px;
   }
   
   .inputGroup{

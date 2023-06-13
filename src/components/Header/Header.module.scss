@@ -77,6 +77,9 @@ header{
     }
 }
 
+:global(.themeIcon){
+    cursor: pointer;
+}
 
 @media screen and (min-width: 1024px) {
     :global(.navbar-menu){
