@@ -16,48 +16,48 @@ const { address, shipping, payInfo } = useContext(CustomerContext);
 function handleNextClick(currentState){
 
     //檢查欄位是否有空白
-    // if(currentState === 1){
-    //     for(let key in address){
-    //         if(address[key].length === 0){
-    //             Swal.fire({
-    //                 position: 'top',
-    //                 icon: 'error',
-    //                 title: '欄位不能有空白',
-    //                 showConfirmButton: false,
-    //                 timer: 1500
-    //               })
-    //             return 
-    //         }
-    //     }
-    // }
-    // if(currentState === 2){
-    //     for(let key in shipping){
-    //         if(shipping[key].length === 0){
-    //             Swal.fire({
-    //                 position: 'top',
-    //                 icon: 'error',
-    //                 title: '欄位不能有空白',
-    //                 showConfirmButton: false,
-    //                 timer: 1500
-    //               })
-    //             return 
-    //         }
-    //     }
-    // }
-    // if(currentState === 3){
-    //     for(let key in payInfo){
-    //         if(payInfo[key].length === 0){
-    //             Swal.fire({
-    //                 position: 'top',
-    //                 icon: 'error',
-    //                 title: '欄位不能有空白',
-    //                 showConfirmButton: false,
-    //                 timer: 1500
-    //               })
-    //             return 
-    //         }
-    //     }
-    // }
+    if(currentState === 1){
+        for(let key in address){
+            if(address[key].length === 0){
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: '欄位不能有空白',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                return 
+            }
+        }
+    }
+    if(currentState === 2){
+        for(let key in shipping){
+            if(shipping[key].length === 0){
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: '欄位不能有空白',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                return 
+            }
+        }
+    }
+    if(currentState === 3){
+        for(let key in payInfo){
+            if(payInfo[key].length === 0){
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: '欄位不能有空白',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                return 
+            }
+        }
+    }
     
     //限制state 在三個step以內，避免畫面錯誤
     if(currentState < 3){
@@ -90,6 +90,7 @@ function handlePrevClick(){
                 />
             </section>
             {showSubmitOrder && createPortal(<Order 
+                resetState={setCurrentState}
                 onClose={() => setShowSubmitOrder(false)}
                 />, document.body)}
         </>

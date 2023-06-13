@@ -3,16 +3,15 @@ import { ReactComponent as CheckIcon } from 'icons/successIcon.svg'
 import styles from './Order.module.scss';
 import { CustomerContext } from 'Context/CustomerOrderContext';
 
-export default function Order ({onClose}) {
+export default function Order ({onClose, resetState}) {
     const { address, shipping, payInfo, products, totalPriceFormat, handleSubmitOrder } = useContext(CustomerContext);
-    console.log('here')
-    console.log(address, 'order')
+
     return (
         <div className="orderContainer" onClick={onClose}>
             <div className="order" onClick={(e) => e.stopPropagation()}>
                 <div className="title">
                     <CheckIcon className='checkIcon'/>
-                    <h2>完成訂購</h2>
+                    <h2>確認訂單</h2>
                 </div>
                 <div className="orderContent">
                     <div className="orderSection">
@@ -82,6 +81,7 @@ export default function Order ({onClose}) {
                         onClose()
                     }}>取消</button>
                     <button className={styles.submitBtn} onClick={()=>{
+                        resetState(1)
                         handleSubmitOrder()
                         onClose()
                     }}>送出訂單</button>

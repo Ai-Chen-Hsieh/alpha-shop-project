@@ -1,4 +1,5 @@
 import { createContext, useState } from "react"
+import Swal from 'sweetalert2'
 
 export const initialAddress = {
     '稱謂': '',
@@ -47,9 +48,8 @@ export const CustomerOrderProvider = ({ children }) => {
 
     const productTotalPrice = products.reduce((acc, cur) => cur.price * cur.quantity + acc, 0)
     const productPriceFormat = new Intl.NumberFormat().format(productTotalPrice);  
-    const totalPrice = productTotalPrice + Number(shipping.price);
+    const totalPrice = (typeof shipping.price) === (typeof 'string') ? productTotalPrice : productTotalPrice + Number(shipping.price);
     const totalPriceFormat = new Intl.NumberFormat().format(totalPrice);  
-
     
     //處理商品數量，增加1
     function handleIncreaseClick (productId) {
@@ -100,7 +100,7 @@ export const CustomerOrderProvider = ({ children }) => {
             setShipping(() => {
                 const value = e.target.value;
                 const method = value.split(' ')[0];
-                const price = value.split(' ')[1] === '免費' ? 0 : value.split(' ')[1];
+                const price = value.split(' ')[1] === '免費' ? '免運費' : value.split(' ')[1];
                 return {
                     'method': method,
                     'price': price
@@ -118,7 +118,15 @@ export const CustomerOrderProvider = ({ children }) => {
 
     //處理送出訂單
     function handleSubmitOrder () {
-        console.log(address, shipping, payInfo, products)
+        //訂單提示訊息
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '已收到訂單, 感謝購買!',
+            showConfirmButton: false,
+            timer: 2000
+        })
+
         //清除訂購資料
         setAddress(()=>{
             return{
@@ -138,10 +146,10 @@ export const CustomerOrderProvider = ({ children }) => {
         })
         setPayInfo(() => {
             return {
-                name: 'John Doe',
-                number: '1111 2222 3333 4444',
-                expirydate: 'MM/YY',
-                cvc: '123',
+                name: '',
+                number: '',
+                expirydate: '',
+                cvc: '',
             }
         })
     }

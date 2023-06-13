@@ -13,13 +13,13 @@ export default function StepThree({currentState}){
                 <div className='col'>
                     <div className={`${styles.inputGroup} ${styles.creditInfo}`}>
                         <div className='inputLabel'>持卡人姓名</div>
-                        <input className={styles.creditInfo} type="text" placeholder='John Doe' value={payInfo['name']} name="name" onChange={(e) => handleOrder?.(e, 'payInfo')}/>
+                        <input className={styles.creditInfo} type="text" placeholder='請輸入持卡人姓名' value={payInfo['name']} name="name" onChange={(e) => handleOrder?.(e, 'payInfo')}/>
                     </div>
                 </div>
                 <div className='col'>
                     <div className={`${styles.inputGroup} ${styles.creditInfo}`}>
                         <div className='inputLabel'>卡號</div>
-                        <input className={styles.creditInfo} type="text" placeholder='1111 2222 3333 4444' value={payInfo['number']} name="number" onChange={(e) => handleOrder?.(e, 'payInfo')}/>
+                        <input className={styles.creditInfo} type="text" placeholder='請輸入卡片號碼' value={payInfo['number']} name="number" onChange={(e) => handleOrder?.(e, 'payInfo')}/>
                     </div>
                 </div>
                 <div className='col'>
@@ -29,7 +29,7 @@ export default function StepThree({currentState}){
                     </div>
                     <div className={`${styles.inputGroup} ${styles.creditCardDate}`}>
                         <div className='inputLabel'>CVC / CCV</div>
-                        <input className={styles.creditInfo} type="text" placeholder='123' value={payInfo['cvc']} name="cvc" onChange={(e) => handleOrder?.(e, 'payInfo')}/>
+                        <input className={styles.creditInfo} type="text" placeholder='xxx' value={payInfo['cvc']} name="cvc" onChange={(e) => handleOrder?.(e, 'payInfo')}/>
                     </div>
                 </div>
                 </section>
