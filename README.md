@@ -1,5 +1,7 @@
 
 # alpha-shop-project
+
+#### [專案入口](https://alpha-shop-project.vercel.app/)
 ## 網頁畫面
 ![alpha shop](https://github.com/Ai-Chen-Hsieh/alpha-shop-project/blob/main/public/img/alpha_shop_light.png)
 ![alpha shop dark](https://github.com/Ai-Chen-Hsieh/alpha-shop-project/blob/main/public/img/alpha_shop_dark.png)
